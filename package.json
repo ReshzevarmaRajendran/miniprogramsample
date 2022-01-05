@@ -7,9 +7,9 @@
    "start": "node server/index.js",
    "build": "cd client && npm install && npm run build"
   },
-  
+
   "engines": {
-    "node": "your-node-version"
+    "node": "v16.13.1"
   },
   "keywords": [],
   "author": "",
