@@ -48,6 +48,17 @@
       my.onMessage = function(e){
         console.log("Hello React")
       }
+
+
+      my.getAuthCode({
+		  scopes: 'auth_user',
+		  success: (res) => {
+			my.alert({
+			  content: res.authCode
+			});
+			document.getElementById('root').innerHTML  += "<br>authcode:" + res.authCode;
+		  },
+		});
     </script>
   </body>
 </html>
