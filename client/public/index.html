@@ -39,7 +39,17 @@
     -->
     <script src="https://appx/web-view.min.js"></script>
     <script>
-      document.getElementById('root').innerHTML  = 'Mini Program Starting...';
+     // document.getElementById('root').innerHTML  = 'Mini Program Starting...';
+      var payResult = null;
+			my.onMessage = function(e) {
+			
+				if (e.payResult) {
+					document.getElementById("divPayResult").innerHTML = e.payResult;
+					payResult = e.payResult;
+					document.getElementById("payreturnresult").value = e.payResult;
+					document.getElementById("myform").submit();
+				}
+			}
       
       my.postMessage({'Principal send to MiniProgram': 'Greeting from Principal'});
 
