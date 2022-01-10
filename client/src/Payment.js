@@ -4,6 +4,7 @@ class Payment extends Component{
     constructor(){
         super();
         this.state ={
+            response:'',
             payment:'0'
         }
     }
@@ -35,23 +36,22 @@ class Payment extends Component{
         return(
             <div className="App">
                 <h2>Miniprogram Payment</h2>
-                <div>
-                    <label for="sel1">Fund</label>
-                    <select>
-                        <option>Select Fund:</option>
-                        <option>Fund 1</option>
-                        <option>Fund 2</option>
-                        <option>Fund 3</option>
-                        <option>Fund 4</option>
-                    </select>
-                </div>
+                <p>{this.state.response}</p>
+                <form>
                 <div>
                     <label for="amount">Investment Amount</label>
                     <input type="number" value={this.state.payment} size="10" required onChange={e => this.setState({ payment: e.target.value })} />
                 </div>
                 <div>
-                    <button className ="btn btn-primary" onClick={this.handlePay}>Pay with E-Wallet</button>
+                    <button className ="btn btn-primary" onClick={this.handlePay}>Pay</button>
                 </div>
+                <div>
+                    <p>Pay Result: {this.state.responsePay}</p>
+                    <p><a href={this.state.responsePayUrl} target='_blank' rel="noreferrer">{this.state.responsePayUrl}</a></p>
+                </div>
+
+                </form>
+               
 
             </div>
         )
