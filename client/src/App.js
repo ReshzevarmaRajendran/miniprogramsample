@@ -1,24 +1,22 @@
-import React from "react";
+import React, { Component } from "react";
 import logo from "./logo.svg";
 import "./App.css";
-import Home from './Home.js'
+import Home from './Home.js';
+import Payment from './Payment.js';
+import {Link} from "react-router-dom";
 
-function App() {
-  // const [data, setData] = React.useState(null);
+class App extends Component{
 
-  // React.useEffect(() => {
-  //   fetch("/api")
-  //     .then((res) => res.json())
-  //     .then((data) => setData(data.message));
-  // }, []);
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <Home/>
-      </header>
+render(){
+  return(
+    <div>
+     
+      <Payment/>
+      
+      
     </div>
-  );
+  )
+}
 }
 
 export default App;
