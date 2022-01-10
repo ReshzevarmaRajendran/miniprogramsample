@@ -47,7 +47,7 @@ class Payment extends Component{
                 </div>
                 <div>
                     <label for="amount">Investment Amount</label>
-                    <input type="number" value={this.state.payment} />
+                    <input type="number" value={this.state.payment} size="10" required onChange={e => this.setState({ payment: e.target.value })} />
                 </div>
                 <div>
                     <button className ="btn btn-primary" onClick={this.handlePay}>Pay with E-Wallet</button>
