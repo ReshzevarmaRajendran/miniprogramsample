@@ -17,6 +17,8 @@
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "express": "^4.17.2",
+    "follow-redirects": "^1.14.6",
+    "http": "^0.0.1-security",
     "jsrsasign": "^10.5.1",
     "moment": "^2.29.1",
     "react-router-dom": "^6.2.1",
